@@ -7,6 +7,7 @@ import plotly.express as px
 # constants
 DATE_ONE = "2014-03-20"
 DATE_TWO = "2016-08-31"
+DATE_THREE = "2016-03-01"
 
 
 # functions
@@ -35,13 +36,15 @@ st.title("Interactive Visualization: Firepower")
 # set a dropdown
 date = st.selectbox(
     "Please choose a date you would like to test...",
-    (DATE_ONE, DATE_TWO),
+    (DATE_ONE, DATE_TWO, DATE_THREE),
     placeholder = "Please select a date"
 )
 
 if date == DATE_ONE:
     create_plotly_map(date)
 elif date == DATE_TWO:
+    create_plotly_map(date)
+elif date == DATE_THREE:
     create_plotly_map(date)
 
 
