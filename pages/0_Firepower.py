@@ -26,7 +26,7 @@ def create_plotly_map(date: str) -> None:
                           )
     fig = px.choropleth(merged_geo_data, geojson=merged_geo_data.geometry, locations= merged_geo_data.index, color=merged_geo_data.sum_frprpl,
                            color_continuous_scale="Viridis",
-                           range_color=(0, 1),
+                           range_color=(0, 2),
                            scope="usa",
                            labels={'sum_frprpl':'CV'}
                           )
