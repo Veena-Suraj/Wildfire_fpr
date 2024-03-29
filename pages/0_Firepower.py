@@ -24,13 +24,14 @@ def create_plotly_map(date: str) -> None:
                            scope="usa",
                            labels={'frp':'FirePower'}
                           )
-    fig = px.choropleth(merged_geo_data, geojson=merged_geo_data.geometry, locations= merged_geo_data.index, color=merged_geo_data.sum_frprpl,
+    fig2 = px.choropleth(merged_geo_data, geojson=merged_geo_data.geometry, locations= merged_geo_data.index, color=merged_geo_data.sum_frprpl,
                            color_continuous_scale="Viridis",
                            range_color=(0, 2),
                            scope="usa",
                            labels={'sum_frprpl':'CV'}
                           )
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0}) 
+    fig2.update_layout(margin={"r":0,"t":0,"l":0,"b":0}) 
 
     # set the plot
     # heading
